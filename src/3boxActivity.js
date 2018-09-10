@@ -30,6 +30,7 @@ class ThreeBoxActivity {
     } catch (err) {
       console.log("no internal txs");
     }
+
     try {
       txs = await etherscanAPI.account.txlist(address);
     } catch (err) {

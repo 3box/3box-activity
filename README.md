@@ -38,7 +38,9 @@ Get the activity (transaction) of the given ethereum address
 
 **Kind**: static method of [<code>ThreeBoxActivity</code>](#ThreeBoxActivity)
 
-**Returns**: <code>Array</code> - a list of activities the address has on the blockchain
+**Returns**: <code>Object</code> - a list of activities the address has on the blockchain
+
+
 
 
 | Param | Type | Description |
