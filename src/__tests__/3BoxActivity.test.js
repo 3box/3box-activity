@@ -21,6 +21,15 @@ describe("3boxActivity", () => {
 
   it("getActivity()  gets Activity of the address", async done => {
     ThreeBoxActivity.getActivity(address).then(activity => {
+      console.log("TX OBJECT");
+      console.log(activity.txs[0]);
+
+      console.log("internal TX OBJECT");
+      console.log(activity.internal[0]);
+
+      console.log("TOKEN  OBJECT");
+      console.log(activity.token[0]);
+
       expect(activity.txs.length).toBeGreaterThanOrEqual(456);
       expect(activity.internal.length).toBeGreaterThanOrEqual(25);
       expect(activity.token.length).toBeGreaterThanOrEqual(100);
