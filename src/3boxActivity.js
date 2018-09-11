@@ -18,7 +18,11 @@ class ThreeBoxActivity {
    *
    * @param     {String}    address                 an ethereum address
    * @return    {Object}                         A collection of tx activities associated to that hash
+   *
+   * The returned object has the following structure:
+   *
    */
+
   static async getActivity(address) {
     if (!address) throw new Error("no address");
     let internal = { result: [] };

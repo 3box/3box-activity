@@ -119,8 +119,3 @@ A `token transfer` object has the following structure:
     confirmations: '2270754'
 }
 ```
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| address | <code>String</code> | an ethereum address |
