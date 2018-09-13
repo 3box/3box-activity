@@ -2597,17 +2597,7 @@ const etherscanAPI = require("etherscan-api").init(
 
 class ThreeBoxActivity {
   /**
-   * Instantiates a threeBox
-   *
-   * @param     {MuPort}        muportDID                   A MuPort DID instance
-   * @param     {Web3Provider}  web3provider                A Web3 provider
-   * @param     {Object}        opts                        Optional parameters
-   * @param     {IPFS}          opts.ipfs                   A custom ipfs instance
-   * @return    {ThreeBox}                                  self
-   */
-
-  /**
-   * Get the public profile of the given address
+   * Gets the activity of a given ethereum address
    *
    * @param     {String}    address                 an ethereum address
    * @return    {Object}                         A collection of tx activities associated to that hash
@@ -2616,7 +2606,7 @@ class ThreeBoxActivity {
    *
    */
 
-  static async getActivity(address) {
+  static async get(address) {
     if (!address) throw new Error("no address");
     let internal = { result: [] };
     let txs = { result: [] };

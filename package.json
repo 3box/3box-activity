@@ -1,6 +1,6 @@
 {
   "name": "3box-activity",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "An API for dapps to create an Ethereum activity feed",
   "main": "lib/3boxActivity.js",
   "directories": {

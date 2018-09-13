@@ -8,8 +8,8 @@ describe("3boxActivity", () => {
     jest.setTimeout(100000);
   });
 
-  it("getActivity() no address", async () => {
-    await ThreeBoxActivity.getActivity()
+  it("get() no address", async () => {
+    await ThreeBoxActivity.get()
       .then(done => {
         fail("shouldn't return");
         done();
@@ -19,8 +19,8 @@ describe("3boxActivity", () => {
       });
   });
 
-  it("getActivity()  gets Activity of the address", async done => {
-    ThreeBoxActivity.getActivity(address).then(activity => {
+  it("get() gets Activity of the address", async done => {
+    ThreeBoxActivity.get(address).then(activity => {
       expect(activity.txs.length).toBeGreaterThanOrEqual(456);
       expect(activity.internal.length).toBeGreaterThanOrEqual(25);
       expect(activity.token.length).toBeGreaterThanOrEqual(100);
