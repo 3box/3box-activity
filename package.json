@@ -1,6 +1,6 @@
 {
   "name": "3box-activity",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "An API for dapps to create an Ethereum activity feed",
   "main": "lib/3boxActivity.js",
   "directories": {
@@ -9,7 +9,7 @@
   "scripts": {
     "test": "jest --runInBand",
     "coverage": "jest --coverage --runInBand --testURL=\"http://localhost\"",
-    "build": "NODE_ENV=production babel src --out-dir lib",
+    "build": "./node_modules/.bin/babel src -d lib",
     "build:dist": "browserify -s ThreeBoxActivity ./src/3boxActivity.js -o ./dist/3boxActivity.js",
     "generate-readme": "cp readme-template.md README.md; ./node_modules/.bin/jsdoc2md src/*.js >> README.md"
   },
@@ -28,6 +28,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-react-app": "^3.1.2",
     "babel-runtime": "^6.26.0",
     "jest": "^23.5.0",
     "jsdoc-to-markdown": "^4.0.1"
