@@ -1,6 +1,6 @@
 {
   "name": "3box-activity",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "An API for dapps to create an Ethereum activity feed",
   "main": "lib/3boxActivity.js",
   "directories": {
@@ -12,7 +12,7 @@
     "lint": "./node_modules/.bin/standard --verbose src/**",
     "build:es5": "./node_modules/.bin/babel src --out-dir lib --ignore=src/__tests__/,src/__mocks__/",
     "build:dist": "./node_modules/.bin/webpack --config webpack.config.js --mode=development",
-    "build:dist:prod": "./node_modules/.bin/webpack --config webpack.config.js --mode=production --output-filename 3boxActivity.min.js",
+    "build:dist:prod": "./node_modules/.bin/webpack --config webpack.config.js --mode=production --output-filename 3box-activity.min.js",
     "build": "npm run build:es5; npm run build:dist; npm run build:dist:prod",
     "generate-readme": "cp readme-template.md README.md; ./node_modules/.bin/jsdoc2md src/*.js >> README.md"
   },
