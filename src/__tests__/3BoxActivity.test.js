@@ -33,7 +33,6 @@ describe("3boxActivity", () => {
       expect(activity.txs.length).toEqual(0);
       expect(activity.internal.length).toEqual(0);
       expect(activity.token.length).toEqual(0);
-      console.log(activity);
       done();
     });
   });
