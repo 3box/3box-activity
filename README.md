@@ -1,3 +1,6 @@
+# ⚠️ ⚠️ This library is no longer supported ⚠️ ⚠️ 
+> 3box.js and related tools built by 3Box Labs are deprecated and no loger supported. Developers are encurraged to build with https://ceramic.network which is a more secure and decentralized protocol for sovereign data.
+
 # 3box-activity
 
 **Warning:** This project is under active development, APIs are subject to change.
