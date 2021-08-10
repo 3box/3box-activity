@@ -19,29 +19,19 @@ class ThreeBoxActivity {
     let tokens = { result: [] }
 
     try {
-      internal = await etherscanAPI.account.txlistinternal(null, address)
+      internal = await etherscanAPI.account.txlistinternal(null, address);
+      txs = await etherscanAPI.account.txlist(address);
+      tokens = await etherscanAPI.account.tokentx(address);
     } catch (err) {
-      console.log('no internal txs')
-    }
-
-    try {
-      txs = await etherscanAPI.account.txlist(address)
-    } catch (err) {
-      console.log('no transactions')
-    }
-
-    try {
-      tokens = await etherscanAPI.account.tokentx(address)
-    } catch (err) {
-      console.log('no token transfers')
+      if (err !== "No transactions found") throw err;
     }
 
     return {
       txs: txs.result,
       internal: internal.result,
       token: tokens.result
-    }
+    };
   }
 }
 
-module.exports = ThreeBoxActivity
+module.exports = ThreeBoxActivity;

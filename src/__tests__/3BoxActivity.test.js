@@ -27,4 +27,13 @@ describe("3boxActivity", () => {
       done();
     });
   });
+
+  it("get() gets Activity of the null address", async done => {
+    ThreeBoxActivity.get("0x00").then(activity => {
+      expect(activity.txs.length).toEqual(0);
+      expect(activity.internal.length).toEqual(0);
+      expect(activity.token.length).toEqual(0);
+      done();
+    });
+  });
 });
